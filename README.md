@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # mi_first_app
 
 A new Flutter project.
@@ -14,3 +15,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# UPGUI_FLUTTER
+UNA APP  MOBIL 
+>>>>>>> 38c2353e078e3e817b1cc9b7f7d7964b499abf86
