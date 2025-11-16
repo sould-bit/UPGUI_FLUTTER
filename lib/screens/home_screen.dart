@@ -3,7 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:mi_first_app/screens/Home_Content.dart';
 import 'package:mi_first_app/screens/notificaciones_screen.dart';
-import 'package:mi_first_app/screens/pagosscreen.dart';
+import 'package:mi_first_app/screens/pagos_screen.dart';
 import 'package:mi_first_app/screens/reservas_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,8 +19,8 @@ class _HomeScreenState extends  State<HomeScreen> {
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeContent(),
     const ReservasScreen(),
-    const NotificacionesScreen(),
-    const Pagosscreen(),
+    NotificacionesScreen(),
+    const PagosScreen(),
   ];
 
   void _onItemTapped(int index){

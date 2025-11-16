@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mi_first_app/screens/formulario_reservar_canchas.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class ReservasScreen extends StatefulWidget {
@@ -92,7 +93,7 @@ class _ReservasScrenState extends State<ReservasScreen> {
                 width: double.infinity, //boton ocupa todo el ancho
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.lightGreen.shade200,
+                    backgroundColor: Colors.lightGreen.shade100,
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12),
                     ),
@@ -101,9 +102,14 @@ class _ReservasScrenState extends State<ReservasScreen> {
 
 
                 onPressed: _selectDay == null ? null : () {
-                      print('Dia Selecionado: $_selectDay' );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => FormularioReservaScreen(diaSeleccionado: _selectDay!,
+                        ),
+                        ),
+                      );
 
-                      //ira la navegacion a la pnatalla del formulario
+
                 },
 
                 child: const Text(
