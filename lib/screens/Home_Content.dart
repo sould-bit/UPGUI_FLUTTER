@@ -55,9 +55,9 @@ class HomeContent extends StatelessWidget {
     scrollDirection: Axis.horizontal, // la clave para el scroll horizontal
     children: [
     // imagenes  por ahora van contenedores decolores
-    _buildGaleriaItem('Cancha A', Colors.green.shade300),
-    _buildGaleriaItem('Cancha b', Colors.green.shade400),
-    _buildGaleriaItem('Cancha c', Colors.green.shade500),
+    _buildGaleriaItem(texto: 'Cancha A' ,imagePath: 'assets/images/cancha.jpg',),
+    _buildGaleriaItem(texto: 'Cancha b', imagePath: 'assets/images/cancha3.png',),
+    _buildGaleriaItem(texto: 'Cancha c',imagePath:  'assets/images/padel.jpg',),
     ],
     ),
     ),
@@ -80,9 +80,10 @@ class HomeContent extends StatelessWidget {
     scrollDirection: Axis.horizontal,
     children: [
     // imagenes  por ahora van contenedores decolores
-    _buildGaleriaItem('TIENDA', Colors.orange.shade300),
-    _buildGaleriaItem('TIENDA', Colors.orange.shade400),
-    _buildGaleriaItem('TIENDA', Colors.orange.shade500),
+    _buildGaleriaItem(texto: 'TIENDA', imagePath:
+         'assets/images/instalacionesjpg.jpg'),
+    _buildGaleriaItem(texto: 'TIENDA', imagePath: 'assets/images/instalac.webp' ),
+    _buildGaleriaItem(texto: 'TIENDA', imagePath: 'assets/images/insta2.jpeg'),
     ],
     ),
     )
@@ -94,13 +95,20 @@ class HomeContent extends StatelessWidget {
     );
   }
 
-  Widget _buildGaleriaItem(String texto, Color color) {
+  Widget _buildGaleriaItem({required String texto, required String imagePath}) {
     return Container(
       width: 250,
       margin: const EdgeInsets.all(8.0),
+      clipBehavior: Clip.antiAlias,
       decoration:  BoxDecoration(
-        color: color,
         borderRadius: BorderRadius.circular(10.0),
+        image: DecorationImage(image: AssetImage(imagePath),
+        fit: BoxFit.cover,
+          colorFilter: ColorFilter.mode(
+            Colors.black.withOpacity(0.35),
+                BlendMode.darken
+          ),
+        ),
       ),
 
       child:  Center(
